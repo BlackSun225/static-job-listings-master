@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+body {
+  font-size: 15px;
+}
+main > header {
+  background: hsl(180, 29%, 50%);
+}
+main > header > img {
+  width: 100%;
+  height: 100%;
+}
+main > div {
+  background-color: hsl(180, 52%, 96%);
+  position: relative;
+}
+#filter {
+  border-radius: 5px;
+  background: white;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 10px hsl(180, 21%, 71%);
+}
+#filter > div {
+  display: flex;
+  align-items: center;
+}
+#filter button {
+  color:hsl(180, 29%, 50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+#filter button:hover {
+  text-decoration: underline;
+}
+.filterKeyword {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+.filterKeyword span:first-child {
+  display: inline-block;
+  height: 1.5rem;
+  border-radius: 3px 0 0 3px;
+}
+.filterKeyword .close {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 0 3px 3px 0;
+  background:hsl(180, 29%, 50%); 
+  cursor: pointer;
+}
+.filterKeyword .close:hover {
+  background: black;
+}
+.filterKeyword .close img {
+  width: 0.6rem;
+}
+.dev {
+  margin: 0 auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px hsl(180, 21%, 71%);
+}
+.featured {
+  border-left: 4px solid hsl(180, 29%, 50%);
+}
+.bio header, .pref, .keywords {
+  display: flex;
+  align-items: center;
+}
+.bio h1 {
+  color: hsl(180, 29%, 50%);
+  font-size: 0.85rem;
+  margin-right: 1rem;
+}
+.bio header span {
+  font-size: 0.65rem;
+  color: white;
+  padding: 3px 6px;
+  padding-top: 4px;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+  background:hsl(180, 29%, 50%);
+  font-weight: 500;
+}
+.bio header span:nth-child(3) {
+  background: hsl(180, 14%, 20%);
+}
+.infos h2 {
+  font-size: 1rem;
+  margin: 0.7rem 0;
+  cursor: pointer;
+}
+.infos h2:hover {
+  color:hsl(180, 29%, 50%);
+}
+.pref span {
+  color: hsl(180, 8%, 52%);
+  font-size: 0.8rem;
+}
+.pref .circle {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: hsl(180, 8%, 52%);
+  margin: 0 1rem;
+}
+.keywords button, .filterKeyword span:first-child {
+  color:hsl(180, 29%, 50%);
+  background: hsl(180, 52%, 96%);
+  padding: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.keywords button {
+  border-radius: 3px;
+  border: none;
+}
+.keywords button:hover {
+  color: white;
+  background:hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+  .mob {
+    display: none;
+  }
+  main {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  main > header {
+    height: 22vh;
+  }
+  main > div {
+    padding: 3rem 0;
+    min-height: calc(100vh - 22vh);
+  }
+  #filter {
+    width: 80%;
+    min-width: 730px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+    padding: 0.8rem 1.5rem;
+  }
+  .dev {
+    width: 80%;
+    min-width: 730px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .bio {
+    display: flex;
+    align-items: center;
+  }
+  .bio > img {
+    width: 4rem;
+    margin-right: 1rem;
+  }
+  .keywords {
+    justify-content: flex-end;
+  }
+  .keywords button:not(:first-child) {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .desk {
+    display: none;
+  }
+  main > header {
+    height: 20vh;
+  }
+  main > div {
+    min-height: calc(100vh - 20vh);
+    padding: 2.5rem 1rem;
+  }
+  #filter {
+    min-height: 1.5rem;
+    position: relative;
+    transform: translateY(calc(-1 * (2rem + 35%)));
+    padding: 0.8rem 1rem;
+  }
+  #filter div, .keywords {
+    flex-wrap: wrap;
+  }
+  .filterKeyword {
+    margin: 0.4rem 0;
+    margin-right: 1rem;
+  }
+  .keywords button {
+    margin-right: 1rem;
+    margin-top: 0.8rem;
+  }
+  .dev {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    position: relative;
+  }
+  .bio {
+    border-bottom: 1px solid hsl(180, 14%, 89%);
+    padding-bottom: 1rem;
+  }
+  .bio img {
+    width: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+}
+
